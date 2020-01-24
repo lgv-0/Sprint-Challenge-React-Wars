@@ -7,9 +7,9 @@ function Card(info)
     return (
         <CardStyle>
             <h2>{info.data.name}</h2>
-            <h4>{info.data.mass}</h4>
-            <h4>{info.data.height}</h4>
-            <h4>{info.data.skin_color}</h4>
+            <h4>Mass-{info.data.mass}kg</h4>
+            <h4>Height-{info.data.height}cm</h4>
+            <h4>Color-{info.data.skin_color}</h4>
         </CardStyle>
     );
 }
