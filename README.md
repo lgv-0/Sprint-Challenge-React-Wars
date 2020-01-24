@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+ReactJS is a framework that aims to make creating large scale applications with mutating data easier to handle - useState for setting/getting
+
 - [ ] What does it mean to _think_ in react?
+
+Understanding rendering and props
 
 - [ ] Describe state.
 
+State is the current status/value of a certain item
+
 - [ ] Describe props.
 
+Props are pieces of data passed down where needed as arguments
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+A side effect is something that happens outside the scope of a function you're changing, the useEffect hook can help sync.
 
 ## Project Set Up
 
