@@ -9,19 +9,17 @@ const App = () =>
   let [peopleArray, sPeopleArray] = useState([]);
   useEffect(()=>
     {
-      axios.get("https://swapi.co/api/people/1").then((response)=>
+      axios.get("https://swapi.co/api/species/2").then((response)=>
       {
         let tmp = [];
-        tmp.push(response.data);
-        axios.get("https://swapi.co/api/people/2").then((response)=>
-        {
-          tmp.push(response.data);
-          axios.get("https://swapi.co/api/people/3").then((response)=>
+        let cnt = response.data.people.length;
+        for (let i = 0; i < cnt; i++)
+          axios.get(response.data.people[i]).then((response)=>
           {
             tmp.push(response.data);
-            sPeopleArray(tmp);
-          });
-        });
+            if (tmp.length == cnt)
+              sPeopleArray(tmp);
+          })
       });
     }, []);
 
@@ -37,9 +35,9 @@ const App = () =>
 
 let CenterContainer = styled.div`
   width: 100%;
-  height: 306px;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 `;
 
 export default App;

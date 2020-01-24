@@ -7,16 +7,16 @@ function Card(info)
     return (
         <CardStyle>
             <h2>{info.data.name}</h2>
-            <h4>{info.data.birth_year}</h4>
-            <h4>{info.data.gender}</h4>
-            <h4>{info.data.hair_color}</h4>
+            <h4>{info.data.mass}</h4>
+            <h4>{info.data.height}</h4>
+            <h4>{info.data.skin_color}</h4>
         </CardStyle>
     );
 }
 
 let CardStyle = styled.div`
     width: 300px;
-    height: 300px;
+    height: 240px;
 
     border: 3px solid gray;
     border-radius: 8px;
