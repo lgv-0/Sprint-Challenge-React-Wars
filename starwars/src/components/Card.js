@@ -21,6 +21,11 @@ let CardStyle = styled.div`
     border: 3px solid gray;
     border-radius: 8px;
     background-color: #e4e4e4bc;
+
+    h2
+    {
+      color: red;
+    }
 `;
 
 export default Card;
